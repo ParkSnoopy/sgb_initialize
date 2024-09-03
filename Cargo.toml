@@ -1,0 +1,9 @@
+[package]
+name = "sgb_init"
+version = "0.0.2"
+edition = "2021"
+
+[dependencies]
+downloader = "0.2.7"
+eyre = "0.6.12"
+homedir = "0.3.3"
