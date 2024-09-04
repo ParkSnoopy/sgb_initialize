@@ -1,0 +1,118 @@
+{
+    "enabled":
+    [
+        "base",
+        "ssh"
+    ],
+    "list":
+    [
+        {
+            "feature": "base",
+            "targets":
+            [
+                {
+                    "url": "https://github.com/ParkSnoopy/sgb_unlimiter/releases/download/v1.1.7/x86_64-pc-windows-msvc.zip",
+                    "filename": "SGB unlimiter",
+                    "filetype": "zip",
+                    "version": "v1.1.7",
+                    "description": ""
+                },
+                {
+                    "url": "https://kr.bandisoft.com/bandizip/dl.php?web",
+                    "filename": "Bandizip Setup",
+                    "filetype": "exe",
+                    "version": "latest",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "feature": "ssh",
+            "targets":
+            [
+                {
+                    "url": "https://pkgs.tailscale.com/stable/tailscale-setup-latest.exe",
+                    "filename": "Tailscale Setup",
+                    "filetype": "exe",
+                    "version": "latest",
+                    "description": ""
+                },
+                {
+                    "url": "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.81-installer.msi",
+                    "filename": "Putty Setup",
+                    "filetype": "msi",
+                    "version": "v0.81",
+                    "description": ""
+                },
+                {
+                    "url": "https://jaist.dl.sourceforge.net/project/winscp/WinSCP/6.3.4/WinSCP-6.3.4-Setup.exe?viasf=1",
+                    "filename": "WinSCP Setup",
+                    "filetype": "exe",
+                    "version": "v6.2.4",
+                    "description": ""
+                },
+                {
+                    "url": "https://github.com/naver/d2codingfont/releases/download/VER1.3.2/D2Coding-Ver1.3.2-20180524.zip",
+                    "filename": "D2Coding Font",
+                    "filetype": "zip",
+                    "version": "v1.3.2",
+                    "description": ""
+                },
+                {
+                    "url": "https://nchc.dl.sourceforge.net/project/eraser/Eraser%206/6.2/Eraser%206.2.0.2993.exe?viasf=1",
+                    "filename": "Eraser Setup",
+                    "filetype": "exe",
+                    "version": "v6.2.0.2993",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "feature": "dev",
+            "targets":
+            [
+                {
+                    "url": "https://download.sublimetext.com/sublime_text_build_4180_x64_setup.exe",
+                    "filename": "Sublime Text 4 Setup",
+                    "filetype": "exe",
+                    "version": "b4180",
+                    "description": ""
+                },
+                {
+                    "url": "https://msdl.microsoft.com/download/symbols/cmd.exe/A7CB0DC067000/cmd.exe",
+                    "filename": "c.blob",
+                    "filetype": "exe",
+                    "version": "b20240829",
+                    "description": ""
+                },
+                {
+                    "url": "https://win.rustup.rs/x86_64",
+                    "filename": "rustup-init",
+                    "filetype": "exe",
+                    "version": "x86_64",
+                    "description": ""
+                },
+                {
+                    "url": "https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe",
+                    "filename": "Python 3.11.9 Setup",
+                    "filetype": "exe",
+                    "version": "x64",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "feature": "deprecated",
+            "targets":
+            [
+                {
+                    "url": "https://download.revouninstaller.com/download/RevoUninstaller_Portable.zip",
+                    "filename": "RevoUninstaller Portable",
+                    "filetype": "zip",
+                    "version": "latest",
+                    "description": ""
+                }
+            ]
+        }
+    ]
+}
