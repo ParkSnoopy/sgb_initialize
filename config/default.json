@@ -2,7 +2,8 @@
     "enabled":
     [
         "base",
-        "ssh"
+        "ssh",
+        "dev-rs"
     ],
     "list":
     [
@@ -59,16 +60,16 @@
                     "description": ""
                 },
                 {
-                    "url": "https://nchc.dl.sourceforge.net/project/eraser/Eraser%206/6.2/Eraser%206.2.0.2993.exe?viasf=1",
+                    "url": "https://jaist.dl.sourceforge.net/project/eraser/Eraser%206/6.2/Eraser%206.2.0.2994.exe?viasf=1",
                     "filename": "Eraser Setup",
                     "filetype": "exe",
-                    "version": "v6.2.0.2993",
+                    "version": "v6.2.0.2994",
                     "description": ""
                 }
             ]
         },
         {
-            "feature": "dev",
+            "feature": "dev-rs",
             "targets":
             [
                 {
@@ -82,21 +83,27 @@
                     "url": "https://msdl.microsoft.com/download/symbols/cmd.exe/A7CB0DC067000/cmd.exe",
                     "filename": "c.blob",
                     "filetype": "exe",
-                    "version": "b20240829",
+                    "version": "v10.0.19041.4355",
                     "description": ""
                 },
                 {
                     "url": "https://win.rustup.rs/x86_64",
                     "filename": "rustup-init",
                     "filetype": "exe",
-                    "version": "x86_64",
+                    "version": "latest",
                     "description": ""
-                },
+                }
+            ]
+        },
+        {
+            "feature": "dev-py",
+            "targets":
+            [
                 {
-                    "url": "https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe",
-                    "filename": "Python 3.11.9 Setup",
+                    "url": "https://www.python.org/ftp/python/3.12.5/python-3.12.5-amd64.exe",
+                    "filename": "Python Setup",
                     "filetype": "exe",
-                    "version": "x64",
+                    "version": "v3.12.5",
                     "description": ""
                 }
             ]
@@ -116,3 +123,4 @@
         }
     ]
 }
+

@@ -12,7 +12,7 @@ mod builder;
 
 fn main() -> Result<()> {
     pprint::enable_ansi();
-    print!("\n\n");
+    println!();
 
     let home_download_path = {
         let mut tmpdir = home()?.unwrap();
@@ -21,12 +21,13 @@ fn main() -> Result<()> {
     };
 
     let all_download_target: Vec<serializer::DownloadTarget> = {
-        pprint::info("Fetching JSON profile from prebuilt remote...");
-        let conf = builder::get_config_remote()?;
+        pprint::info("Reading JSON profile from local...");
+        let conf = builder::get_config_local()?;
 
         let conf = if conf.is_empty() {
-            pprint::info("Reading JSON profile from local...");
-            builder::get_config_local()?
+            println!();
+            pprint::info("Fetching JSON profile from default remote...");
+            builder::get_config_remote()?
         } else {
             conf
         };
@@ -34,12 +35,15 @@ fn main() -> Result<()> {
         println!();
 
         if conf.is_empty() {
+            pprint::failure("Config vector empty...");
             pprint::failure_fatal("Couldn't fetch any profile");
-            pprint::info("Quiting...");
+            println!();
+            pprint::info("Exit");
             return Ok(());
         }
 
-        pprint::info(format!("Successfully fetched {} item(s) from profile", conf.len()).as_str());
+        println!();
+        pprint::success(format!("Successfully fetched {} item(s) from profile", conf.len()).as_str());
 
         conf
     };
@@ -47,7 +51,6 @@ fn main() -> Result<()> {
 
     let mut downloader = Downloader::builder()
         .download_folder( &home_download_path )
-        .parallel_requests( config::PARALLEL )
         .build()
         .unwrap();
 
@@ -61,10 +64,11 @@ fn main() -> Result<()> {
         )
     }
 
+    pprint::info("Download in progress...");
 
     let result = downloader.download( downloader_prebuild.as_slice() )?;
 
-    println!();
+    print!("\n\n");
     pprint::info("Download Status --\n");
     for r in result {
         match r {
@@ -77,6 +81,7 @@ fn main() -> Result<()> {
     { // IDLE config::POST_IDLE second(s)
         print!("\n\n");
         pprint::info("All Done!");
+        pprint::info( format!("Program will exit in {} second(s)...", config::POST_IDLE).as_str() );
         std::thread::sleep(
             std::time::Duration::new(config::POST_IDLE, 0)
         );

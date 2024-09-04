@@ -13,7 +13,16 @@ use serde_json;
 
 
 pub fn get_config_local() -> Result<Vec<DownloadTarget>> {
-	let file = File::open( config::DEFAULT_CONFIG_JSON_LOCAL )?;
+	let file = {
+		match File::open( config::CONFIG_JSON_LOCAL_PATH ) {
+			Ok (f) => { f },
+			Err(_) => {
+				pprint::failure("Failed to read JSON profile from local");
+				return Ok(Vec::new());
+			}
+		}
+	};
+
 	let reader = BufReader::new( file );
 
 	let fdtl: FeaturedDownloadTargetList = serde_json::from_reader( reader )?;
