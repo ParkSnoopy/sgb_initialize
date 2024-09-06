@@ -4,6 +4,7 @@ version = "0.1.2"
 edition = "2021"
 
 [dependencies]
+ansi_term = "0.12.1"
 downloader = "0.2.7"
 eyre = "0.6"
 homedir = "0.3.3"
@@ -18,3 +19,4 @@ openssl = { version = "0.10", features = ["vendored"] }
 [build-dependencies]
 eyre = "0.6"
 winres = "0.1.12"
+
