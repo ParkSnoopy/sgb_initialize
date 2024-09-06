@@ -56,8 +56,8 @@ pub fn get_config_remote() -> Result<Vec<DownloadTarget>> {
         .unwrap();
 
     let json_download = downloader::Download::new(format!("{}{}",
-    		config::DEFAULT_CONFIG_JSON_REMOTE_BASE_URL,
-    		config::DEFAULT_CONFIG_JSON_REMOTE_FILENAME,
+    	    config::DEFAULT_CONFIG_JSON_REMOTE_BASE_URL,
+    	    config::DEFAULT_CONFIG_JSON_REMOTE_FILENAME,
     	).as_str())
         .file_name( Path::new( config::DEFAULT_CONFIG_JSON_REMOTE_FILENAME ) );
 

@@ -1,7 +1,7 @@
 use eyre::{ Result };
 use downloader::{ Downloader };
 use homedir::{ my_home as home };
-use ansi_term::{ Color };
+use nu_ansi_term::{ Color };
 
 pub mod config;
 pub mod pprint;
@@ -43,7 +43,7 @@ fn main() -> Result<()> {
         }
 
         println!();
-        pprint::success(format!("Successfully fetched {} item(s) from profile", conf.len()).as_str());
+        pprint::success(format!("Successfully fetched {} item(s) from profile", conf.len()));
 
         conf
     };
@@ -81,7 +81,7 @@ fn main() -> Result<()> {
     { // IDLE config::POST_IDLE second(s)
         print!("\n\n");
         pprint::info("All Done!");
-        pprint::info( format!("Program will exit in {} second(s)...", config::POST_IDLE).as_str() );
+        pprint::info( format!("Program will exit in {} second(s)...", config::POST_IDLE) );
         std::thread::sleep(
             std::time::Duration::new(config::POST_IDLE, 0)
         );
