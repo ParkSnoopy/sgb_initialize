@@ -2,6 +2,8 @@
 name = "sgb_initializer"
 version = "0.1.2"
 edition = "2021"
+repository = "https://github.com/mil-acc-github/sgb_initializer"
+license-file = "LICENSE"
 
 [dependencies]
 downloader = "0.2.7"
@@ -17,4 +19,9 @@ openssl = { version = "0.10", features = ["vendored"] }
 
 [build-dependencies]
 eyre = "0.6"
-winres = "0.1.12"
+winres = "0.1"
+
+[package.metadata.winres]
+FileDescription = "Simple personal program to set my development environment on CKIR"
+ProductName = "SGB Initializer"
+OriginalFilename = "sgb_initializer.exe"

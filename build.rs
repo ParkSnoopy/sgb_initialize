@@ -2,7 +2,8 @@ use eyre::Result;
 
 
 fn main() -> Result<()> {
-    if cfg!(target_os = "windows") {
+    #[cfg(windows)] // Build host machine have to be WindowsOS in order to compile with manifest/icon
+    {
         use winres;
 
         let mut res = winres::WindowsResource::new();
@@ -18,6 +19,8 @@ fn main() -> Result<()> {
   </trustInfo>
 </assembly>
         "#);
+
+        res.set_icon("assets/icon.ico");
 
         res.compile()?;
     }
