@@ -51,6 +51,7 @@ fn main() -> Result<()> {
 
     let mut downloader = Downloader::builder()
         .download_folder( &home_download_path )
+        .parallel_requests( config::CONCURRENT_DOWNLOAD )
         .build()
         .unwrap();
 
