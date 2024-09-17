@@ -19,6 +19,8 @@ openssl = { version = "0.10", features = ["vendored"] }
 
 [build-dependencies]
 eyre = "0.6"
+
+[target.'cfg(windows)'.build-dependencies]
 winres = "0.1"
 
 [package.metadata.winres]
