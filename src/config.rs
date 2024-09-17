@@ -1,4 +1,4 @@
-pub const POST_IDLE: u64 = 5;
+pub const POST_IDLE: u64 = 20;
 
 pub const CONFIG_JSON_LOCAL_PATH: &str = "./config/default.json"; // start from cmd pwd
 
